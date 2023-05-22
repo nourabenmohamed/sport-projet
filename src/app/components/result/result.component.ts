@@ -28,14 +28,14 @@ commentsTab:any=[];
 
   }
 
-  scoreColor(s1, s2) {
-    if (s1 > s2) {
-      return "green";
-    } else if (s1 < s2) {
-      return "orange";
-    } else {
-      return "blue";
-    }
-  }
+  // scoreColor(s1, s2) {
+  //   if (s1 > s2) {
+  //     return "green";
+  //   } else if (s1 < s2) {
+  //     return "orange";
+  //   } else {
+  //     return "blue";
+  //   }
+  // }
 
 }
