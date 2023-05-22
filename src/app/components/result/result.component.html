@@ -1,0 +1,58 @@
+<div class="container" style="margin-top: 100px;">
+  <div class="row">
+    <div class="col-lg-12">
+
+      <div class="d-flex team-vs">
+        <span class="score">
+          <span
+            [ngStyle]="{'color': scoreColor(matcheInput.scoreOne,matcheInput.scoreTwo)}">{{matcheInput.scoreOne}}</span>
+          -
+          <span
+            [ngStyle]="{'color': scoreColor(matcheInput.scoreTwo,matcheInput.scoreOne)}">{{matcheInput.scoreTwo}}</span>
+        </span>
+        <div class="team-1 w-50">
+          <div class="team-details w-100 text-center">
+            <img src="assets/images/logo_1.png" alt="Image" class="img-fluid">
+            <h3>
+              <span [ngClass]="{
+                'win': matcheInput.scoreOne > matcheInput.scoreTwo,
+                'loss': matcheInput.scoreOne < matcheInput.scoreTwo,
+                'draw': matcheInput.scoreOne == matcheInput.scoreTwo
+              }"> {{matcheInput.teamOne}} </span>
+              <span>(win)</span>
+            </h3>
+          </div>
+        </div>
+        <div class="team-2 w-50">
+          <div class="team-details w-100 text-center">
+            <img src="assets/images/logo_2.png" alt="Image" class="img-fluid">
+            <h3>
+              <span [ngClass]="{
+                'win': matcheInput.scoreTwo > matcheInput.scoreOne,
+                'loss': matcheInput.scoreTwo < matcheInput.scoreOne,
+                'draw': matcheInput.scoreTwo == matcheInput.scoreOne
+              }">
+              {{matcheInput.teamTwo}}
+            </span>
+              <span>(loss)</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" style="margin-top: 10%;">
+  <form #commentForm="ngForm" (ngSubmit)="addComment()">
+   <div class="form-group">
+<input type="text" class="form-control" [(ngModel)]="comment.content" name="content" placeholder="Your comment.....">
+   </div>
+   <div class="form-group">
+    <input style="margin-left: 45%;" type="submit" class="btn btn-primary py-3 px-5" value="Add Comment">
+</div>
+  </form>
+</div>
+<div *ngFor="let c of matcheInput.comments">
+  
+<div class="text-center">{{c.content}}</div>
+</div>

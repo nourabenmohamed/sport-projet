@@ -1,0 +1,30 @@
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Name </th>
+      <th scope="col">Position </th>
+      <th scope="col">Number </th>
+      <th scope="col">Age </th>
+      <th scope="col">Team </th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let player of players">
+      <th >{{player.id}}</th>
+      <th >{{player.name}}</th>
+      <td>{{player.position}}</td>
+      <td>{{player.number}}</td>
+      <td>{{player.age}}</td>
+      <td>{{player.teamId}}</td>
+      <td>
+        <button class="btn btn-info">Display</button>
+        <button class="btn btn-warning">Edit</button>
+        <button class="btn btn-danger" (click)="deletePlayer(player.id)">Delete</button>
+      </td>
+    </tr>
+    
+    
+  </tbody>
+</table>

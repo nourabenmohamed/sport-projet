@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="row ">
+        <div class="col-6 p-3">
+            <form  #stadiumForm="ngForm" (ngSubmit)="addStadium()">
+                <div class="mb-3">
+                    
+                    <input type="text" class="form-control" name="name" [(ngModel)]="stadium.name" placeholder="name">
+                </div>
+                <div class="mb-3">
+                    
+                    <input type="text" class="form-control" name="capacity" [(ngModel)]="stadium.capacity" placeholder="capacity">
+                </div>
+                <div class="mb-3">
+                  
+                    <input type="text" class="form-control" name="city" [(ngModel)]="stadium.city" placeholder="city">
+                </div>
+
+
+
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+
+
+    </div>
+
+</div>

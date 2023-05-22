@@ -1,0 +1,47 @@
+<header class="site-navbar py-4" role="banner">
+
+    <div class="container">
+      <div class="d-flex align-items-center">
+        <div class="site-logo">
+          <a href="index.html">
+            <img src="{{path}}" alt="Logo">
+          </a>
+        </div>
+        <div class="ml-auto">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+              <li class="active"><a routerLink="" class="nav-link">{{home}}</a></li>
+              <li><a routerLink="matches" class="nav-link">{{matches}}</a></li>
+              <li><a routerLink ="players" class="nav-link">{{players}}</a></li>
+              
+              <li>
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Admin
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" routerLink="Add-match" >Add-Match</a>
+                    <a class="dropdown-item"  routerLink="Add-team">Add-team</a>
+                    <a class="dropdown-item"  routerLink="Add-player">Add-Player</a>
+                    <a class="dropdown-item"  routerLink="Add-Staduim">Add-Staduim</a>
+                    <a class="dropdown-item" routerLink="Admin">Dashboard</a>
+                  </div>
+                </div>
+              </li>
+              <li><a routerLink="signup" class="nav-link">signup</a></li>
+             
+              <li><a routerLink="login" class="nav-link">login</a></li>
+              <li><a routerLink="searchMatches" class="nav-link">Search</a></li>
+              <li><a routerLink="weather" class="nav-link">Weather</a></li>
+              <li><a routerLink="reclamation" class="nav-link">Reclamation</a></li>
+              
+            </ul>
+          </nav>
+
+          <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right text-white"><span
+              class="icon-menu h3 text-white"></span></a>
+        </div>
+      </div>
+    </div>
+
+  </header>

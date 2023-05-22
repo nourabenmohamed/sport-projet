@@ -1,0 +1,23 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white"> Search Weather</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form #weatherForm="ngForm" (ngSubmit)="searchWeather()">
+    <div class="mb-3">
+        <input type="text" class="form-control" [(ngModel)]="obj.city"name="city" placeholder="insert city">
+    </div>
+    
+      <button type="submit" class="btn btn-primary">Search</button>
+      <div *ngIf="result" class="text-center">
+        <div>Temperature:{{result?.temperature}} C°</div>
+      <div>Humidity:{{result?.humidity}}</div>
+      <div>Pressure:{{result?.pressure}}</div>
+      <div><img [src]="result?.img" *ngIf="result?.img" alt=""></div>
+      </div>
+      
+</form>

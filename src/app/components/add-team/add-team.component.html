@@ -1,0 +1,64 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-12">
+              <h1 class="text-white">Add Team</h1>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row ">
+      <div class="col-6 p-3">
+          <form #teamForm="ngForm" (ngSbmit)="addTeam()">
+              <div class="mb-3">
+                  
+                  <input type="text" class="form-control" name="name" [(ngModel)]="team.name" placeholder="name"
+                  #name="ngModel"
+                 [ngClass]="{ 'is-invalid': teamForm.submitted && name.invalid }" name required minlength="3">
+                 <div *ngIf="teamForm.submitted && name.invalid" >
+                    <p *ngIf="name.errors.required">Name is required</p>
+                    <p *ngIf="name.errors.minlength">Name must have at least 3 chars</p>
+                 </div>
+                 <div class="form-group">
+                    <select class="custom-select" [(ngModel)]="team.staduimId" name="staduimId">
+                       <option [value]="s.id" *ngFor="let s of staduims">{{s.name}}</option>
+                        
+                      </select>
+                 </div>
+ 
+              </div>
+              <div class="mb-3">
+                
+                  <input type="text" class="form-control" name="owner" [(ngModel)]="team.owner" placeholder="owner">
+              </div>
+              <div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                    
+                    </div>
+                    <select class="custom-select" [(ngModel)]="player.teamId" name="teamId" placeholder="team Id">
+                      <option selected></option>
+                      <option [value]="" *ngFor=""></option>
+                      </select>
+                  </div>
+                  
+            </div>
+
+              <div class="mb-3">
+               
+                  <input type="text" class="form-control" name="teamOne" [(ngModel)]="team.foundation" placeholder="foundation">
+                  <button type="submit" class="btn btn-primary">Add team</button>
+              </div>
+
+
+              
+          </form>
+      </div>
+
+
+  </div>
+
+</div>

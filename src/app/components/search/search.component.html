@@ -1,0 +1,27 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white">Search Matches</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <form #searchForm="ngForm" (ngSubmit)="search()">
+        <div class="mb-3">
+            <input type="number" class="form-control" [(ngModel)]="scoreOne"name="match.scoreOne" placeholder="score one ">
+        </div>
+        <div class="mb-3">
+          <input type="number" class="form-control" [(ngModel)]="scoreTwo"name="match.scoreTwo" placeholder="score Two ">
+      </div>
+          <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <div *ngFor="let m of findedMatches">
+      <app-result [matcheInput]="m"></app-result>
+    </div>
+    <div *ngIf="findedMatches?.length==0">
+      No founded matches
+
+    </div>
+    

@@ -1,0 +1,47 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white">Admin</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab"role="tab" aria-controls="home" aria-selected="true">Matches</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Players</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Teams</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="user-tab" data-toggle="tab" href="#user" role="tab" aria-controls="user" aria-selected="false">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="staduim-tab" data-toggle="tab" href="#staduim" role="tab" aria-controls="user" aria-selected="false">staduim</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <app-matches-tab></app-matches-tab>
+      </div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <app-players-table></app-players-table>
+      </div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+       <app-teams-tab></app-teams-tab>
+      </div>
+      <div class="tab-pane fade" id="user" role="tabpanel" aria-labelledby="user-tab">
+        <app-users-tab></app-users-tab>
+      </div>
+      <div class="tab-pane fade" id="staduim" role="tabpanel" aria-labelledby="staduim-tab">
+        <app-add-stadium></app-add-stadium>
+      </div>
+      
+      
+      
+  </div>

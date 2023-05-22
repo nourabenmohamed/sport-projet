@@ -1,0 +1,35 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <h1 class="text-white">Add store</h1>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row ">
+        <div class="col-8 p-3">
+            <div >
+                <form #storeForm="ngForm" (ngSubmit)="addStore()" class="row">
+                    <div class="col-6">
+                        <label class="">Name</label>
+                        <input type="text" class="form-control" name="name" [(ngModel)]="store.name">
+                    </div>
+                    <div class=" col-6">
+                        <label for="exampleInputEmail1" class="form-label">Address</label>
+                        <input type="text" class="form-control" name="address" [(ngModel)]="store.address">
+                    </div>
+                   
+                    <div class=" col-12 mt-3">
+                       
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+  </div>
